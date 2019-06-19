@@ -1,0 +1,14 @@
+{
+    "nome_software": "Android Studio",
+    "link_site": "https://developer.android.com/studio",
+    "laboratorio": [
+        "14"
+    ],
+    "justificativa": "Precisamos desenvolver aplicações Android",
+    "sistema_operacional": "Window 7",
+    "dependencias": {
+        "nome_dependencia": "Java",
+        "link_site": "https://www.java.com/pt_BR/download/"
+    },
+    "nome_professor": "Josceli"
+}
