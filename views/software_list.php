@@ -5,7 +5,9 @@ function getSoftwareList()
 {
   $json = file_get_contents("../data/softwares.json", "r");
   $list = json_decode($json, true);
-
+  usort($list, function($a, $b) {
+    return $a['nome'] - $b['nome'];
+});
   return $list;
 }
 
