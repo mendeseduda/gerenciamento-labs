@@ -4,7 +4,11 @@
     include("./layout/head.php");
 ?>
 <body>
-    <form method="post" action="../server/autenticar.php">
+    <form method="post" action="../server/cadastro.php">
+    
+    <input type="text" name="nome" placeholder="Nome">
+
+    <input type="text" name="prontuario" placeholder="Prontuário">
 
     <input type="email" name="email" placeholder="E-mail">
 
