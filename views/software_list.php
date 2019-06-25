@@ -20,7 +20,8 @@ function getSoftwareList()
 <body>
   <?php include(__DIR__ . "/layout/navBar.php") ?>
   <div class="col">
-    <h4>Lista de softwares por laboratorio</h4>
+    <h2 class="d-flex justify-content-center">Lista de softwares por laboratório</h2>
+    <br>
     <div id="lista-softwares">
       <?php
       $list = getSoftwareList();

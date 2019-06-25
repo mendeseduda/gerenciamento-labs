@@ -6,6 +6,9 @@
 <body>
 <?php include(__DIR__ . "/layout/navBar.php")?>
 
+<h2 class="d-flex justify-content-center">Requisição de softwares pros laboratórios</h2>
+<br>
+
 <form method="get" action="../server/requisition.php">
   <!-- Início nome do software -->
   <div class="form-group col-sm">
@@ -26,8 +29,8 @@
 
       <?php
       for ($i = 1; $i <= 16; $i++) {
-        echo "<br><input class='form-check-input' type='checkbox' value='lab-$i' id='lab-$i'>
-        <label class='form-check-label' for='lab-$i'>
+        echo "<br><input class='form-check-input check-align' type='checkbox' value='lab-$i' id='lab-$i'>
+        <label class='form-check-label label-align' for='lab-$i'>
           Lab $i
         </label>";
       }
@@ -45,29 +48,29 @@
   <div class="form-group col-sm">
     <label>Sistema Operacional</label>
     <br>
-    <input class='form-check-input' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
-    <label class='form-check-label' for='windows-7'> Windows 7</label>
+    <input class='form-check-input check-align' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
+    <label class='form-check-label label-align' for='windows-7'> Windows 7</label>
     <br>
-    <input class='form-check-input' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
-    <label class='form-check-label' for='windows-8'> Windows 8</label>
+    <input class='form-check-input check-align' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
+    <label class='form-check-label label-align' for='windows-8'> Windows 8</label>
     <br>
-    <input class='form-check-input' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
-    <label class='form-check-label' for='windows-10'> Windows 10</label>
+    <input class='form-check-input check-align' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
+    <label class='form-check-label label-align' for='windows-10'> Windows 10</label>
     <br>
-    <input class='form-check-input' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
-    <label class='form-check-label' for='linux'> Linux</label>
+    <input class='form-check-input check-align' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
+    <label class='form-check-label label-align' for='linux'> Linux</label>
     <br>
-    <input class='form-check-input' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
-    <label class='form-check-label' for='macos'> MacOS</label>
+    <input class='form-check-input check-align' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
+    <label class='form-check-label label-align' for='macos'> MacOS</label>
   </div>
   <!-- Fim sistema operacional -->
-  <button type="button" class="btn btn-info" onclick="showDependencies()">Adicionar dependência</button>
+  <button type="button" class="btn btn-info" style="margin: 5px 10px !important;" onclick="showDependencies()">Adicionar dependência</button>
   
 <!-- Início dependências -->
 <div id="demo"></div>
 <!-- Fim dependências -->
 
- <button type="submit" class="btn btn-primary check-me-out">Enviar</button>
+ <button type="submit" class="btn btn-primary" style="margin: 5px 10px !important;">Enviar</button>
  
 </form>
 
@@ -77,7 +80,7 @@ function showDependencies() {
   document.getElementById("demo").innerHTML = $dependencies;
 }
 </script>
-
+<?php include("./layout/scripts.php") ?>
 </body>
 
 </html>

@@ -2,8 +2,12 @@ body {
   margin-left: 250px !important;
 }
 
-.check-me-out {
-  padding-left: 50px;
+.check-align {
+  margin-left: 0 !important;
+}
+
+.label-align{
+  margin-left: 30px !important;
 }
 
 .textarea-justify {
