@@ -12,5 +12,6 @@
 
     <input type="submit">
 </form>
+<?php include("./layout/scripts.php")?>
 </body>
 </html>

@@ -1,0 +1,100 @@
+[
+    {
+        "nome-software": "VS Code foda",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": true
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    },
+    {
+        "nome-software": "VS Code",
+        "url": "https:\/\/code.visualstudio.com\/",
+        "sistema-operacional": "Windows 7",
+        "laboratorio": [
+            "01",
+            "02"
+        ],
+        "justificativa": "Bom editor",
+        "dependencias": "Nenhuma",
+        "url-dependencias": "",
+        "nome-professor": "Josceli",
+        "aprovado": false
+    }
+]
