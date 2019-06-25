@@ -4,7 +4,8 @@
 <?php include(__DIR__ . "/layout/head.php")?>
 <body>
 <?php include(__DIR__ . "/layout/navBar.php")?>
-<form>
+
+<form method="get" action="../server/requisition.php">
   <!-- Início nome do software -->
   <div class="form-group col-sm">
     <label for="software-name">Nome do software</label>
@@ -42,55 +43,40 @@
   <!-- Início sistema operacional -->
   <div class="form-group col-sm">
     <label>Sistema Operacional</label>
-    <div class="checkbox-group required">
-      <br>
-      <input class='form-check-input' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
-      <label class='form-check-label' for='windows-7'> Windows 7</label>
-      <br>
-      <input class='form-check-input' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
-      <label class='form-check-label' for='windows-8'> Windows 8</label>
-      <br>
-      <input class='form-check-input' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
-      <label class='form-check-label' for='windows-10'> Windows 10</label>
-      <br>
-      <input class='form-check-input' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
-      <label class='form-check-label' for='linux'> Linux</label>
-      <br>
-      <input class='form-check-input' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
-      <label class='form-check-label' for='macos'> MacOS</label>
-    </div>
+    <br>
+    <input class='form-check-input' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
+    <label class='form-check-label' for='windows-7'> Windows 7</label>
+    <br>
+    <input class='form-check-input' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
+    <label class='form-check-label' for='windows-8'> Windows 8</label>
+    <br>
+    <input class='form-check-input' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
+    <label class='form-check-label' for='windows-10'> Windows 10</label>
+    <br>
+    <input class='form-check-input' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
+    <label class='form-check-label' for='linux'> Linux</label>
+    <br>
+    <input class='form-check-input' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
+    <label class='form-check-label' for='macos'> MacOS</label>
   </div>
   <!-- Fim sistema operacional -->
+  <button type="button" class="btn btn-info" onclick="showDependencies()">Adicionar dependência</button>
   
 <!-- Início dependências -->
-<div class="form-group col-sm">
-  <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Dependências</label>
-  <div class="form-group col-sm">
-    <small>Adicione todas as dependências necessárias</small>
-  </div>
-  <!-- Início nome das dependências -->
-  <div class="form-group col-sm">
-    <label for="dependence-names">Nome das dependências</label>
-    <textarea class="form-control" id="dependence-names" rows="3" placeholder="Insira o nome de todas as dependências, separados por um ;"></textarea>
-  </div>
-  <!-- Fim nome das dependências -->
-  <!-- Início link das dependências -->
-  <div class="form-group col-sm">
-    <label for="dependence-links">Link das dependências</label>
-    <textarea class="form-control" id="dependence-links" rows="3" placeholder="Insira o link de todas as dependências, separados por um ;"></textarea>
-  </div>
-  <!-- Fim link das dependências -->
-</div>
+<div id="demo"></div>
 <!-- Fim dependências -->
 
  <button type="submit" class="btn btn-primary check-me-out">Enviar</button>
- <button type="button" class="btn btn-info">Adicionar dependência</button>
+ 
 </form>
 
 <script>
-  if(!$('div.checkbox-group.required :checkbox:checked').length > 0)
-      alert("Deve selecionar ao menos um sistema operacional");                       
+function showDependencies() {
+  var $dependencies = '<div class="form-group col-sm"><label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Dependências</label><div class="form-group col-sm"><small>Adicione todas as dependências necessárias</small></div><!-- Início nome das dependências --><div class="form-group col-sm"><label for="dependence-names">Nome das dependências</label><textarea class="form-control" id="dependence-names" rows="3" placeholder="Insira o nome de todas as dependências, separados por um ;"></textarea></div><!-- Fim nome das dependências --><!-- Início link das dependências --><div class="form-group col-sm"><label for="dependence-links">Link das dependências</label><textarea class="form-control" id="dependence-links" rows="3" placeholder="Insira o link de todas as dependências, separados por um ;"></textarea></div><!-- Fim link das dependências --></div>'
+  document.getElementById("demo").innerHTML = $dependencies;
+}
 </script>
+
 </body>
 </html>
 
