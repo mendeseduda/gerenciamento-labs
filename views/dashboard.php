@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (sizeof($_SESSION["usuario"]) < 1) {
+    header('Location: /gerenciamento-labs/views/login.php');
+}
 if (!$_SESSION["admin"]) {
     header('Location: /gerenciamento-labs/views/index.php');
 }
@@ -24,7 +27,7 @@ include("./layout/head.php");
         <h1>Requisições de Software</h1>
         <br>
         <div id="accordion" style="width: 700px;">
-            <div class="w-100 text-right"><a href="/gerenciamento-labs/views/addSoftware.php">Adicionar software</a></div>
+            <div class="w-100 text-right"><a href="/gerenciamento-labs/views/addSoftware.php" target="_blank">Adicionar software</a></div>
             <?php
             if (sizeof($requisitions) > 0)
                 foreach ($requisitions as $key => $requisition) : ?>
@@ -45,7 +48,7 @@ include("./layout/head.php");
                         <div id="<?= "collapse" . $key ?>" class="collapse" aria-labelledby="<?= "heading" . $key ?>" data-parent="#accordion">
                             <div class="card-body">
                                 <div class="my-1">
-                                    <div><strong>Sistema Operacional: </strong><?= $requisition["sistema-operacional"] ?></div>
+                                    <div><strong>Sistema Operacional: </strong><?= implode(",", $requisition["sistema-operacional"]) ?></div>
                                 </div>
                                 <div class="my-1">
                                     <div><strong>Laboratório(s): </strong><?= implode(",", $requisition["laboratorio"]) ?></div>
@@ -56,8 +59,17 @@ include("./layout/head.php");
                                 </div class="my-1">
                                 <div class="my-1">
                                     <div><strong>Dependências:</strong></div>
-                                    <textarea class="textarea-justify" name="" id="" cols="50" rows="5" disabled value="Ótimo para programar WEB"><?= $requisition["dependencias"] ?></textarea>
+                                    <ul>
+                                        <?php $cont = 0 ?>
+                                        <?php foreach ($requisition["dependencias"] as $dependencia) : ?>
+                                            <li><a <?= $requisition["url-dependencias"][$cont] ? 'href="' . $requisition['url-dependencias'][$cont] . '"' : ""  ?> target="_blank"><?= $dependencia === "" ? "Nenhuma" : $dependencia ?></a></li>
+                                            <?php
+                                            $cont++;
+                                        endforeach
+                                        ?>
+                                    </ul>
                                 </div>
+
                                 <div class="text-right">
                                     <form class="form-btn" action="../server/delete_requisition.php" method="POST">
                                         <input type="hidden" name="id" value="<?= $key ?>">

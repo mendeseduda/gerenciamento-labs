@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["usuario"])) {
+    header('Location: /gerenciamento-labs/views/login.php');
+}
 if (!$_SESSION["admin"]) {
     header('Location: /gerenciamento-labs/views/index.php');
 }

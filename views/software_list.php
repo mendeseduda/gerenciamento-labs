@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION["usuario"])) {
+  header('Location: /gerenciamento-labs/views/login.php');
+}
+
 function getSoftwareList()
 {
   $json = file_get_contents("../data/softwares.json", "r");
