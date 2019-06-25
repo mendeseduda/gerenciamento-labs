@@ -4,7 +4,7 @@
     include("./layout/head.php");
 ?>
 <body>
-    <form method="post" action="../server/autenticar.php">
+    <form method="post" action="../server/autenticate.php">
 
     <input type="email" name="email" placeholder="E-mail">
 
