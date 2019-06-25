@@ -4,17 +4,22 @@
     include("./layout/head.php");
 ?>
 <body>
-    <form method="post" action="../server/register.php">
-    
-    <input type="text" name="nome" placeholder="Nome">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <form method="post" action="../server/register.php">
 
-    <input type="text" name="prontuario" placeholder="Prontuário">
+            <input type="text" name="nome" class="form-control" placeholder="Nome">
+            <input type="text" name="prontuario" class="form-control" placeholder="Prontuário">
+            <input type="email" name="email" class="form-control" placeholder="E-mail">
+            <input type="password" name="senha" class="form-control" placeholder="Senha">
 
-    <input type="email" name="email" placeholder="E-mail">
+            <a href="login.php" class="card-link">Já tem conta? Faça seu login</a>
 
-    <input type="password" name="senha" placeholder="Senha">
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px !important;">Enviar</button>
+            </form>
+        </div>
+    </div>
 
-    <input type="submit">
 </form>
 </body>
 </html>

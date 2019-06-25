@@ -1,4 +1,8 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 $nome_software = $_GET['software-name'];
 $link_software = $_GET['software-link'];
 $justificativa = $_GET['software-justification'];
@@ -45,7 +49,7 @@ $gravar = array('nome-software' => $nome_software,
 
 $gravar_json = json_encode($gravar);
 
-$data_requisition = fopen("../data/softwares_requisitions.json", "a+");
+$data_requisition = fopen("../data/requisitions.json", "a+");
 fwrite($data_requisition, $gravar_json);
 
 header('Location: /gerenciamento-labs/views/software_requisition.php');
