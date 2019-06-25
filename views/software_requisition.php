@@ -29,7 +29,7 @@
 
       <?php
       for ($i = 1; $i <= 16; $i++) {
-        echo "<br><input class='form-check-input check-align' type='checkbox' value='lab-$i' id='lab-$i'>
+        echo "<br><input class='form-check-input check-align' type='checkbox' name='lab-$i' value='lab-$i' id='lab-$i'>
         <label class='form-check-label label-align' for='lab-$i'>
           Lab $i
         </label>";
@@ -48,19 +48,19 @@
   <div class="form-group col-sm">
     <label>Sistema Operacional</label>
     <br>
-    <input class='form-check-input check-align' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
+    <input class='form-check-input check-align' type='checkbox' value='windows-7' id='windows-7' name="windows-7">
     <label class='form-check-label label-align' for='windows-7'> Windows 7</label>
     <br>
-    <input class='form-check-input check-align' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
+    <input class='form-check-input check-align' type='checkbox' value='windows-8' id='windows-8' name="windows-8">
     <label class='form-check-label label-align' for='windows-8'> Windows 8</label>
     <br>
-    <input class='form-check-input check-align' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
+    <input class='form-check-input check-align' type='checkbox' value='windows-10' id='windows-10' name="windows-10">
     <label class='form-check-label label-align' for='windows-10'> Windows 10</label>
     <br>
-    <input class='form-check-input check-align' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
+    <input class='form-check-input check-align' type='checkbox' value='linux' id='linux' name="linux">
     <label class='form-check-label label-align' for='linux'> Linux</label>
     <br>
-    <input class='form-check-input check-align' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
+    <input class='form-check-input check-align' type='checkbox' value='macos' id='macos' name="macos">
     <label class='form-check-label label-align' for='macos'> MacOS</label>
   </div>
   <!-- Fim sistema operacional -->
@@ -76,7 +76,7 @@
 
 <script>
 function showDependencies() {
-  var $dependencies = '<div class="form-group col-sm"><label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Dependências</label><div class="form-group col-sm"><small>Adicione todas as dependências necessárias</small></div><!-- Início nome das dependências --><div class="form-group col-sm"><label for="dependence-names">Nome das dependências</label><textarea class="form-control" id="dependence-names" rows="3" placeholder="Insira o nome de todas as dependências, separados por um ;"></textarea></div><!-- Fim nome das dependências --><!-- Início link das dependências --><div class="form-group col-sm"><label for="dependence-links">Link das dependências</label><textarea class="form-control" id="dependence-links" rows="3" placeholder="Insira o link de todas as dependências, separados por um ;"></textarea></div><!-- Fim link das dependências --></div>'
+  var $dependencies = '<div class="form-group col-sm"><label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Dependências</label><div class="form-group col-sm"><small>Adicione todas as dependências necessárias</small></div><!-- Início nome das dependências --><div class="form-group col-sm"><label for="dependence-names">Nome das dependências</label><textarea class="form-control" id="dependence-names" name="dependence-names" rows="3" placeholder="Insira o nome de todas as dependências, separados por um ;"></textarea></div><!-- Fim nome das dependências --><!-- Início link das dependências --><div class="form-group col-sm"><label for="dependence-links">Link das dependências</label><textarea class="form-control" id="dependence-links" name="dependence-links" rows="3" placeholder="Insira o link de todas as dependências, separados por um ;"></textarea></div><!-- Fim link das dependências --></div>'
   document.getElementById("demo").innerHTML = $dependencies;
 }
 </script>

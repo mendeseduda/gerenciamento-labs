@@ -1,0 +1,12 @@
+{"nome-software":"teste","url":"http:\/\/julinda.com","sistema-operacional":0,"justificativa":"software legal"}
+{"nome-software":"VS Code da Massa","url":"http:\/\/vscode.com","sistema-operacional":0,"justificativa":"sem justificativa"}
+{"nome-software":"VS Code da Massa","url":"http:\/\/vscode.com","sistema-operacional":["windows-7"],"justificativa":"afad"}
+{"nome-software":"teste","url":"afad","sistema-operacional":["windows-7"],"justificativa":"software legal"}
+{"nome-software":"teste 3","url":"http:\/\/teste.com","sistema-operacional":["windows-7"],"justificativa":"pq eu quero"}
+{"nome-software":"teste 5","url":"teste.com.br","sistema-operacional":["windows-7","windows-8","linux"],"justificativa":"acho legla"}
+{"nome-software":"teste 40","url":"teste40.com.br","sistema-operacional":["windows-8","linux"],"laboratorio":[],"justificativa":"gosto mto desse"}
+{"nome-software":"aaaaaaaaa ","url":"http:\/\/aaaaaaaaa.com","sistema-operacional":["windows-7","windows-8","windows-10","linux"],"laboratorio":["lab-2","lab-4","lab-5","lab-7"],"justificativa":"n guento mais"}
+{"nome-software":"teste","url":"aaa.com.pt","sistema-operacional":["windows-10"],"laboratorio":["lab-2","lab-7","lab-9"],"justificativa":"pq nn","dependencias":["vs code"," sublime"," atom"]}
+{"nome-software":"testando mais uma vez","url":"http:\/\/meudeus.com","sistema-operacional":["linux","macos"],"laboratorio":["lab-2","lab-3","lab-5"],"justificativa":"ssss","dependencias":["vs code"," sublime"," atom"],"url-dependencias":["http:\/\/julinda.com"," http:\/\/vscode.com"]}
+{"nome-software":"mais uma vez","url":"http:\/\/julinda.com","sistema-operacional":["windows-7","windows-8"],"laboratorio":["lab-6","lab-8"],"justificativa":"n sei","dependencias":["vs code"," sublime"],"url-dependencias":["http:\/\/coco.com"],"nome-professor":null}
+{"nome-software":"VS Code da Massa","url":"http:\/\/vscode.com","sistema-operacional":["windows-8","windows-10"],"laboratorio":["lab-5","lab-7"],"justificativa":"pqqq","dependencias":["atom"," sublime"],"url-dependencias":["www.sublime.com"],"nome-professor":null}
