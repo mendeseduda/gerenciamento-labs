@@ -10,7 +10,7 @@
 
     <input type="text" name="prontuario" placeholder="Prontuário">
 
-    <input type="mail" name="email" placeholder="E-mail">
+    <input type="email" name="email" placeholder="E-mail">
 
     <input type="password" name="senha" placeholder="Senha">
 
