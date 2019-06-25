@@ -17,9 +17,11 @@ while(!feof($fp)){
 }
     if($usuarioEncontrado) {
         $_SESSION["usuario"] = $email;
-        header('Location: http://localhost/gerenciamento-labs/views/index.php');
+        header('Location: /gerenciamento-labs/views/index.php');
+        exit;
         }
         else {
-        header('Location: http://localhost/gerenciamento-labs/views/login.php');
+        header('Location: /gerenciamento-labs/views/login.php');
+        exit;
         }
 ?>

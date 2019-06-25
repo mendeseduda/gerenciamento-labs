@@ -42,21 +42,23 @@
   <!-- Início sistema operacional -->
   <div class="form-group col-sm">
     <label>Sistema Operacional</label>
-    <br>
-    <input class='form-check-input' type='checkbox' value='windows-7' id='windows-7' name="os" required>
-    <label class='form-check-label' for='windows-7'> Windows 7</label>
-    <br>
-    <input class='form-check-input' type='checkbox' value='windows-8' id='windows-8' name="os">
-    <label class='form-check-label' for='windows-8'> Windows 8</label>
-    <br>
-    <input class='form-check-input' type='checkbox' value='windows-10' id='windows-10' name="os">
-    <label class='form-check-label' for='windows-10'> Windows 10</label>
-    <br>
-    <input class='form-check-input' type='checkbox' value='linux' id='linux' name="os">
-    <label class='form-check-label' for='linux'> Linux</label>
-    <br>
-    <input class='form-check-input' type='checkbox' value='macos' id='macos' name="os">
-    <label class='form-check-label' for='macos'> MacOS</label>
+    <div class="checkbox-group required">
+      <br>
+      <input class='form-check-input' type='checkbox' value='windows-7' id='windows-7' name="checkbox_name[]">
+      <label class='form-check-label' for='windows-7'> Windows 7</label>
+      <br>
+      <input class='form-check-input' type='checkbox' value='windows-8' id='windows-8' name="checkbox_name[]">
+      <label class='form-check-label' for='windows-8'> Windows 8</label>
+      <br>
+      <input class='form-check-input' type='checkbox' value='windows-10' id='windows-10' name="checkbox_name[]">
+      <label class='form-check-label' for='windows-10'> Windows 10</label>
+      <br>
+      <input class='form-check-input' type='checkbox' value='linux' id='linux' name="checkbox_name[]">
+      <label class='form-check-label' for='linux'> Linux</label>
+      <br>
+      <input class='form-check-input' type='checkbox' value='macos' id='macos' name="checkbox_name[]">
+      <label class='form-check-label' for='macos'> MacOS</label>
+    </div>
   </div>
   <!-- Fim sistema operacional -->
   
@@ -84,6 +86,11 @@
  <button type="submit" class="btn btn-primary check-me-out">Enviar</button>
  <button type="button" class="btn btn-info">Adicionar dependência</button>
 </form>
+
+<script>
+  if(!$('div.checkbox-group.required :checkbox:checked').length > 0)
+      alert("Deve selecionar ao menos um sistema operacional");                       
+</script>
 </body>
 </html>
 

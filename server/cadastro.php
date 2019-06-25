@@ -10,6 +10,7 @@ $fp = fopen("../data/users.csv", "a");
 
 fputcsv($fp, $usuario);
 
-fclose($fp);
-header('Location: http://localhost/gerenciamento-labs/views/login.php');
+header('Location: /gerenciamento-labs/views/login.php');
+fclose($fp); 
+
 ?>
